@@ -1,0 +1,65 @@
+﻿@model Patients;
+@{
+    Layout = "_Layout";
+}
+    <p class="h2">Информация о пациенте</p>
+
+    <p>Номер мед. карты @Model.NumberMedicalCard</p>
+    <p>QR</p>
+    <img src="data:image/png;base64,@Convert.ToBase64String(Model.QrCode)" class="w-25"/>
+    <div class="form-group">
+        <p>Имя: @Model.Firstname</p>
+    </div>
+    <div class="form-group">
+        <p>Фамилия: @Model.Firstname</p>
+    </div>
+    <div class="form-group">
+        <p>Отчество: @Model.Surname</p>
+    </div>
+    <div class="form-group">
+        <p>Номер паспорта: @Model.NumberPassport</p>
+    </div>
+    <div class="form-group">
+        <p>Дата рождения: @Model.DateBirth</p>
+    </div>
+    <div class="form-group">
+        @if(Model.Female)
+        {
+            <p>Пол: Женский</p>
+        }
+        else
+        {
+            <p>Пол: Мужской</p>
+        }
+    </div>
+    <div class="form-group">
+        <p>Адрес: @Model.Address</p>
+    </div>
+    <div class="form-group">
+        <p>Номер телефона: @Model.PhoneNumber</p>
+    </div>
+    <div class="form-group">
+        <p>Электронная почта: @Model.Email</p>
+    </div>
+    <div class="form-group">
+        <p>Дата выдачи медицинской карты: @Model.DateIssueMedicalCard</p>
+    </div>
+    <div class="form-group">
+        <p>Дата посещения: @Model.DateAppeal</p>
+    </div>
+    <div class="form-group">
+        <p>Дата следующего визита: @Model.DateNextVisit</p>
+    </div>
+    <div class="form-group">
+        <p>Номер медицинского полиса: @Model.NumberPolicy</p>
+    </div>
+    <div class="form-group">
+        <p>Дата истичения срока действия полиса: @Model.DateExpiration</p>
+    </div>
+    <div class="form-group">
+        <p>Медицинская история: @Model.MedicalHistory</p>
+    </div>
+    <div class="form-group">
+        <p>Диагноз: @Model.Diagnosis</p>
+    </div>
+    <input type="submit" class="btn-primary " placeholder="Отправить" />

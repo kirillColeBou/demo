@@ -1,0 +1,80 @@
+﻿@model Patients;
+@{
+    Layout = "_Layout";
+}
+    <form method="post" enctype="multipart/form-data" class="d-flex justify-content-center flex-column">
+        <div asp-validation-summary="ModelOnly"></div>
+        <p class="h2">Регистрация пациентов</p>
+        <div class="form-group">
+            <label asp-for="ImageFile" class="form-label"></label>
+            <input type="file" asp-for="ImageFile" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Firstname" class="form-label"></label>
+            <input asp-for="Firstname" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Lastname" class="form-label"></label>
+            <input asp-for="Lastname" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Surname" class="form-label"></label>
+            <input asp-for="Surname" />
+        </div>
+        <div class="form-group">
+            <label asp-for="NumberPassport" class="form-label"></label>
+            <input asp-for="NumberPassport" />
+        </div>
+        <div class="form-group">
+            <label asp-for="DateBirth" class="form-label"></label>
+            <input asp-for="DateBirth" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Female" class="form-label"></label>
+            <select asp-for="Female">
+                <option value="False">Муж</option>
+                <option value="True">Жен</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="Address" class="form-label"></label>
+            <input asp-for="Address" />
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumber" class="form-label"></label>
+            <input asp-for="PhoneNumber" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" />
+        </div>
+        <div class="form-group">
+            <label asp-for="DateIssueMedicalCard" class="form-label"></label>
+            <input asp-for="DateIssueMedicalCard" />
+        </div>
+        <div class="form-group">
+            <label asp-for="DateAppeal" class="form-label"></label>
+            <input asp-for="DateAppeal" />
+        </div>
+        <div class="form-group">
+            <label asp-for="DateNextVisit" class="form-label">asda</label>
+            <input asp-for="DateNextVisit" class="inp" />
+        </div>
+        <div class="form-group">
+            <label asp-for="NumberPolicy" class="form-label"></label>
+            <input asp-for="NumberPolicy" />
+        </div>
+        <div class="form-group">
+            <label asp-for="DateExpiration" class="form-label"></label>
+            <input asp-for="DateExpiration" />
+        </div>
+        <div class="form-group">
+            <label asp-for="MedicalHistory" class="form-label"></label>
+            <input asp-for="MedicalHistory" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Diagnosis" class="form-label"></label>
+            <textarea asp-for="Diagnosis"></textarea>
+        </div>
+        <input type="submit" class="btn-primary " placeholder="Отправить" />
+    </form>
